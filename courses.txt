@@ -1,0 +1,7 @@
+0 Linux
+0 python
+1 C++ 12
+2 MATLAB 90
+1 Machine_Learning 21
+0 Data_Structure 
+1 MySql 5
