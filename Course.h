@@ -7,11 +7,12 @@
 #include <string>
 
 /*
- * Ã¿ÃÅ¿Î³ÌÓĞÎ¨Ò»µÄID
- * ½ûÖ¹¿½±´Óë¸³Öµ
- * ²ÉÓÃÒÆ¶¯¿½±´Óë¸³Öµ³ÉÔ±
+ * æ¯é—¨è¯¾ç¨‹æœ‰å”¯ä¸€çš„ID
+ * ç¦æ­¢æ‹·è´ä¸èµ‹å€¼
+ * é‡‡ç”¨ç§»åŠ¨æ‹·è´ä¸èµ‹å€¼æˆå‘˜
  */
 
+//åŸºç¡€è¯¾
 class Course
 {
 public:
@@ -19,15 +20,15 @@ public:
 	Course(const std::string& _name);
 	virtual ~Course() = default;
 
-	//½«¿½±´¹¹Ôìº¯ÊıºÍ¸³ÖµÔËËã·û¶¨Òå³ÉÉ¾³ıµÄ
+	//å°†æ‹·è´æ„é€ å‡½æ•°å’Œèµ‹å€¼è¿ç®—ç¬¦å®šä¹‰æˆåˆ é™¤çš„
 	Course(const Course&) = delete;
 	Course& operator=(const Course&) = delete;
 
-	//ÒÆ¶¯¹¹Ôìº¯ÊıºÍÒÆ¶¯¸³ÖµÔËËã·û
+	//ç§»åŠ¨æ„é€ å‡½æ•°å’Œç§»åŠ¨èµ‹å€¼è¿ç®—ç¬¦
 	Course(Course&& course) noexcept;
 	Course& operator=(Course&& course) noexcept;
 
-	//ÏÂÃæÁ½¸öĞéº¯ÊıÅÉÉúÀà²»ÓÃ¸ÄĞ´
+	//ä¸‹é¢ä¸¤ä¸ªè™šå‡½æ•°æ´¾ç”Ÿç±»ä¸ç”¨æ”¹å†™
 	virtual void SetName(const std::string& newName);
 
 	virtual std::string GetName() const;
@@ -42,7 +43,7 @@ protected:
 	static int currentID;
 };
 
-//ÏîÄ¿¿Î
+//é¡¹ç›®è¯¾
 class ProjectCourse :public Course
 {
 public:
@@ -59,7 +60,7 @@ private:
 	int tag;
 };
 
-//ÆÀ¹À¿Î
+//è¯„ä¼°è¯¾
 class JudgeCourse :public Course
 {
 public:
